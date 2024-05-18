@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>DOM</title>
+    </head>
+    <body>
+    <ul id="mylist">
+        <li>Msc(SS)</li>
+    </ul>
+    <button onclick="Insert();">Insert</button><br><br>
+    <button onclick="Replace();">Replace</button><br><br>
+    <button onclick="Remove();">Remove</button>
+    <script>
+        function Insert(){
+            const new1=document.createElement("li");
+            const node=document.createTextNode("Msc(IS)");
+            new1.appendChild(node);
+            const list=document.getElementById("mylist");
+            list.insertBefore(new1,list.children[0]);
+        }
+        function Replace(){
+            const new2=document.createElement("li");
+            const node1=document.createTextNode("CT-PG");
+            new2.appendChild(node1);
+            const list1=document.getElementById("mylist");
+            list1.replaceChild(new2,list1.children[1]);
+        }
+        function Remove(){
+            const list2=document.getElementById("mylist");
+            list2.removeChild(list2.children[0]);
+        }
+        </script>
+</body>
+</html>
